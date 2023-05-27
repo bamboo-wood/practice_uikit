@@ -25,15 +25,18 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
         view.addSubview(label)
         view.addSubview(button)
         
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
