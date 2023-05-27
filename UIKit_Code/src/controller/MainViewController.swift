@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  UIKit_Code
 //
 //  Created by 佐々木一樹 on 2023/05/27.
@@ -19,19 +19,21 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         mainView.button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
     @objc private func buttonTapped() {
-        mainView.label.text = "Button Tapped!!"
         presentAlert()
     }
     
     private func presentAlert() {
+        
         let alertController = UIAlertController(title: "Alert", message: "Button Tapped!!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-            let nextViewController = MainViewController()
-            self?.navigationController?.pushViewController(nextViewController, animated: true)
+            print("das")
+            let subVC = SubViewController()
+            self?.navigationController?.pushViewController(subVC, animated: true)
         }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)

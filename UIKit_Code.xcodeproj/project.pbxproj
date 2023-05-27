@@ -13,6 +13,8 @@
 		DF1C2FE82A21A0C20001FF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1C2FE72A21A0C20001FF5E /* Assets.xcassets */; };
 		DF1C2FEB2A21A0C20001FF5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1C2FE92A21A0C20001FF5E /* LaunchScreen.storyboard */; };
 		DF3E59F12A21B650005EF3B6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E59F02A21B650005EF3B6 /* MainView.swift */; };
+		DF7244F22A21C11100AA0F24 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7244F12A21C11100AA0F24 /* SubView.swift */; };
+		DF7244F42A21C15200AA0F24 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7244F32A21C15200AA0F24 /* SubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DF1C2FEA2A21A0C20001FF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF1C2FEC2A21A0C20001FF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF3E59F02A21B650005EF3B6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DF7244F12A21C11100AA0F24 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		DF7244F32A21C15200AA0F24 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DF3E59F02A21B650005EF3B6 /* MainView.swift */,
+				DF7244F12A21C11100AA0F24 /* SubView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DF1C2FE22A21A0C10001FF5E /* MainViewController.swift */,
+				DF7244F32A21C15200AA0F24 /* SubViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -172,7 +178,9 @@
 				DF1C2FE32A21A0C10001FF5E /* MainViewController.swift in Sources */,
 				DF3E59F12A21B650005EF3B6 /* MainView.swift in Sources */,
 				DF1C2FDF2A21A0C10001FF5E /* AppDelegate.swift in Sources */,
+				DF7244F42A21C15200AA0F24 /* SubViewController.swift in Sources */,
 				DF1C2FE12A21A0C10001FF5E /* SceneDelegate.swift in Sources */,
+				DF7244F22A21C11100AA0F24 /* SubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2764B74L32;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIKit_Code/Info.plist;
+				INFOPLIST_FILE = UIKit_Code/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -340,7 +348,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2764B74L32;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIKit_Code/Info.plist;
+				INFOPLIST_FILE = UIKit_Code/resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
