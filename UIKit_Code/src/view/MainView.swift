@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainView.swift
 //  UIKit_Code
 //
 //  Created by 佐々木一樹 on 2023/05/27.
@@ -7,9 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    private let label: UILabel = {
+class MainView: UIView {
+    let label: UILabel = {
         let label = UILabel()
         label.text = "Hello, World!"
         label.textAlignment = .center
@@ -17,36 +16,35 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private lazy var button: UIButton = { [weak self] in
+
+    var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Tap me", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        view.addSubview(label)
-        view.addSubview(button)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .white
+        self.addSubview(label)
+        self.addSubview(button)
         
         setupConstraints()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20)
         ])
     }
-    
-    @objc private func buttonTapped() {
-        label.text = "Button Tapped!!"
-    }
 }
+
 
