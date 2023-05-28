@@ -22,6 +22,8 @@
 		DF7245032A22FA4900AA0F24 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7245022A22FA4900AA0F24 /* APIManager.swift */; };
 		DF7245062A23011C00AA0F24 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7245052A23011C00AA0F24 /* ItemViewModel.swift */; };
 		DF7245092A2301AA00AA0F24 /* ItemReposiroty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7245082A2301AA00AA0F24 /* ItemReposiroty.swift */; };
+		DF72450C2A23052A00AA0F24 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72450B2A23052A00AA0F24 /* Coordinator.swift */; };
+		DF72450E2A23055100AA0F24 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72450D2A23055100AA0F24 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		DF7245022A22FA4900AA0F24 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DF7245052A23011C00AA0F24 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		DF7245082A2301AA00AA0F24 /* ItemReposiroty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemReposiroty.swift; sourceTree = "<group>"; };
+		DF72450B2A23052A00AA0F24 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DF72450D2A23055100AA0F24 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				DF1C2FDE2A21A0C10001FF5E /* AppDelegate.swift */,
 				DF1C2FE02A21A0C10001FF5E /* SceneDelegate.swift */,
 				DF1C2FE92A21A0C20001FF5E /* LaunchScreen.storyboard */,
+				DF72450A2A23050E00AA0F24 /* coordinators */,
 				DF3E59F52A21BD54005EF3B6 /* controller */,
 				DF3E59F42A21BD49005EF3B6 /* view */,
 				DF7245042A22FFDC00AA0F24 /* view_model */,
@@ -171,6 +176,15 @@
 				DF7245082A2301AA00AA0F24 /* ItemReposiroty.swift */,
 			);
 			path = repository;
+			sourceTree = "<group>";
+		};
+		DF72450A2A23050E00AA0F24 /* coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DF72450B2A23052A00AA0F24 /* Coordinator.swift */,
+				DF72450D2A23055100AA0F24 /* AppCoordinator.swift */,
+			);
+			path = coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,9 +265,11 @@
 			files = (
 				DF1C2FE32A21A0C10001FF5E /* MainViewController.swift in Sources */,
 				DF7244FD2A22F98D00AA0F24 /* APIRequest.swift in Sources */,
+				DF72450C2A23052A00AA0F24 /* Coordinator.swift in Sources */,
 				DF7245032A22FA4900AA0F24 /* APIManager.swift in Sources */,
 				DF7245062A23011C00AA0F24 /* ItemViewModel.swift in Sources */,
 				DF3E59F12A21B650005EF3B6 /* MainView.swift in Sources */,
+				DF72450E2A23055100AA0F24 /* AppCoordinator.swift in Sources */,
 				DF1C2FDF2A21A0C10001FF5E /* AppDelegate.swift in Sources */,
 				DF7245092A2301AA00AA0F24 /* ItemReposiroty.swift in Sources */,
 				DF7244FF2A22F9C700AA0F24 /* Item.swift in Sources */,
