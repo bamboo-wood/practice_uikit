@@ -17,10 +17,18 @@ class SubView: UIView {
         return label
     }()
     
+    let button: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Fetch Item", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
         self.addSubview(label)
+        self.addSubview(button)
         
         setupConstraints()
     }
@@ -33,7 +41,13 @@ class SubView: UIView {
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20)
         ])
+    }
+    
+    func update(withItem item: Item?) {
+        label.text = item?.name
     }
 }
 

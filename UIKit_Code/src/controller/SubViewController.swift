@@ -17,7 +17,7 @@ class SubViewController: UIViewController {
     
     init(viewModel: ItemViewModel) {
         self.viewModel = viewModel
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -30,11 +30,14 @@ class SubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        subView.button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func buttonTapped() {
         Task {
             do {
-                let item = try await viewModel.fetchItem(id: "your_item_id_here")
-                print("Name: \(item.name), Price: \(item.price), Type: \(item.type)")
+                try await viewModel.fetchItem(id: "your_item_id_here")
+                subView.update(withItem: viewModel.item)
             } catch {
                 print("Error: \(error)")
             }

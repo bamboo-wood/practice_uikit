@@ -22,7 +22,6 @@ class APIManager {
         
         switch response.result {
         case .success(let value):
-            print(value)
             return value
         case .failure(let error):
             print(error)

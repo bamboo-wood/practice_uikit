@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

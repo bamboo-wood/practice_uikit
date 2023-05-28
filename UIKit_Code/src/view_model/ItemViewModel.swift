@@ -16,7 +16,7 @@ class ItemViewModel {
         self.repository = repository
     }
     
-    func fetchItem(id: String) async throws -> Item {
-        return try await repository.fetchItem(withId: id)
+    func fetchItem(id: String) async throws {
+        item = try await repository.fetchItem(withId: id)
     }
 }
