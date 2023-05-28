@@ -39,7 +39,9 @@ class SubViewController: UIViewController {
                 try await viewModel.fetchItem(id: "your_item_id_here")
                 subView.update(withItem: viewModel.item)
             } catch {
-                print("Error: \(error)")
+                if let error = error.asAFError {
+                    showNetworkErrorAlert(message: error.localizedDescription)
+                }
             }
         }
     }

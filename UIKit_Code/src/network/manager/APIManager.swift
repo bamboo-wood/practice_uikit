@@ -24,7 +24,6 @@ class APIManager {
         case .success(let value):
             return value
         case .failure(let error):
-            print(error)
             throw error
         }
     }

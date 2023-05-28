@@ -24,6 +24,7 @@
 		DF7245092A2301AA00AA0F24 /* ItemReposiroty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7245082A2301AA00AA0F24 /* ItemReposiroty.swift */; };
 		DF72450C2A23052A00AA0F24 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72450B2A23052A00AA0F24 /* Coordinator.swift */; };
 		DF72450E2A23055100AA0F24 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72450D2A23055100AA0F24 /* AppCoordinator.swift */; };
+		DF7245112A2319A100AA0F24 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7245102A2319A100AA0F24 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DF7245082A2301AA00AA0F24 /* ItemReposiroty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemReposiroty.swift; sourceTree = "<group>"; };
 		DF72450B2A23052A00AA0F24 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DF72450D2A23055100AA0F24 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DF7245102A2319A100AA0F24 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				DF7245042A22FFDC00AA0F24 /* view_model */,
 				DF7245072A23019100AA0F24 /* repository */,
 				DF7244F82A22F87800AA0F24 /* network */,
+				DF72450F2A23198400AA0F24 /* extensions */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -187,6 +190,14 @@
 			path = coordinators;
 			sourceTree = "<group>";
 		};
+		DF72450F2A23198400AA0F24 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF7245102A2319A100AA0F24 /* UIViewController+Alert.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7245112A2319A100AA0F24 /* UIViewController+Alert.swift in Sources */,
 				DF1C2FE32A21A0C10001FF5E /* MainViewController.swift in Sources */,
 				DF7244FD2A22F98D00AA0F24 /* APIRequest.swift in Sources */,
 				DF72450C2A23052A00AA0F24 /* Coordinator.swift in Sources */,
