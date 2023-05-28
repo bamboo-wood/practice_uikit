@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
         
         let alertController = UIAlertController(title: "Alert", message: "Button Tapped!!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-            let subVC = SubViewController()
+            let subVC = SubViewController(viewModel: ItemViewModel(repository: ItemRepository()))
             self?.navigationController?.pushViewController(subVC, animated: true)
         }
         alertController.addAction(okAction)

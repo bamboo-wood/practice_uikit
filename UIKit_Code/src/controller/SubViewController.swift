@@ -13,6 +13,17 @@ class SubViewController: UIViewController {
         return view as! SubView
     }
     
+    private let viewModel: ItemViewModel
+    
+    init(viewModel: ItemViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = SubView()
     }
@@ -22,8 +33,7 @@ class SubViewController: UIViewController {
         
         Task {
             do {
-                let request = GetItemRequest(itemId: "your_item_id_here")
-                let item = try await APIManager.shared.perform(request)
+                let item = try await viewModel.fetchItem(id: "your_item_id_here")
                 print("Name: \(item.name), Price: \(item.price), Type: \(item.type)")
             } catch {
                 print("Error: \(error)")
