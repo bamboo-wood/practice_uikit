@@ -19,6 +19,16 @@ class SubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Task {
+            do {
+                let request = GetItemRequest(itemId: "your_item_id_here")
+                let item = try await APIManager.shared.perform(request)
+                print("Name: \(item.name), Price: \(item.price), Type: \(item.type)")
+            } catch {
+                print("Error: \(error)")
+            }
+        }
     }
 }
 
