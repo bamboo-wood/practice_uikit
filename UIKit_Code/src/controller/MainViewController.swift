@@ -30,7 +30,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "My Navigation Bar"
+        
         mainView.button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
@@ -49,3 +50,26 @@ class MainViewController: UIViewController {
     }
 }
 
+import SwiftUI
+
+struct MainViewControllerRepresentable : UIViewControllerRepresentable {
+    let coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    func makeUIViewController(context: Context) -> MainViewController {
+        return MainViewController(coordinator: coordinator)
+    }
+    func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+    }
+}
+
+struct MyViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        let navigationController = UINavigationController()
+        let coordinator = AppCoordinator(navigationController: navigationController)
+        MainViewControllerRepresentable(coordinator: coordinator)
+    }
+}

@@ -12,7 +12,7 @@ class MainView: UIView {
         let label = UILabel()
         label.text = "Hello, World"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = .preferredFont(forTextStyle: .largeTitle)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -30,7 +30,6 @@ class MainView: UIView {
         self.backgroundColor = .white
         self.addSubview(label)
         self.addSubview(button)
-        
         setupConstraints()
     }
     
